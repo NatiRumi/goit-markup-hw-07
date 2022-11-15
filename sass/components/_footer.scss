@@ -1,0 +1,104 @@
+footer {
+    background-color: getColor('footer');
+}
+
+.footer {
+    display: flex;
+}
+
+.footer__position {
+    margin-right: 70px;
+    width: 230px;
+    @include padding(60px);      
+}
+
+.adress {
+    li {
+        margin-bottom: 9px;
+    }
+
+    li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.adress__link {
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+    color: getColor('text');
+    font-style: normal;
+    transition: color 250ms $timingFunction;
+
+    &:focus,
+    &:hover {
+        color: getColor('button');
+    }
+}
+
+.footer__network {
+    margin-top: 72px;
+    margin-bottom: 100px;
+    margin-right: 93px;
+
+    h2 {
+        @extend %footerHeader;
+    }
+
+    ul {
+        @extend %position;
+        width: 206px;
+    }
+}
+
+
+.footer__icon {
+    background-color: #45454a;
+    @extend %icon;
+}
+
+
+.footer__registration {
+    margin-top: 72px;
+    width: 570px;
+    height: 86px;
+
+    h2 {
+        @extend %footerHeader;
+    }
+}
+
+.footer__form {
+    display: flex;
+
+    input {
+        display: block;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: #2f303a;
+        border-radius: 4px;
+        min-width: 358px;
+    }
+
+    [placeholder] {
+        color: getColor('button');
+        padding-left: 16px;
+        display: block;
+        height: 100%;
+    }
+}
+
+
+.button--footer {
+    margin-left: 12px;
+    padding-left: 28px;
+    padding-right: 28px;
+    display: flex;
+    align-items: center;
+
+    svg {
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+    }
+}
+
